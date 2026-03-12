@@ -10,13 +10,13 @@ options.add_experimental_option("detach", True)  # If we use False here all thes
 driver = Chrome(options=options)  # We must declare the above variable here because it is the command which is holding the browser.
 
 # To open a web-page.
-driver.get('https://demoqa.com')  # This is a command which is passed to open a particular web-page.
+driver.get('https://amazon.in')  # This is a command which is passed to open a particular web-page.
 # return-type for this is => NONE
 
 #   --(3)--BROWSER WINDOW METHODS-----
 
 # (1.)To Minimize a web-page.
-driver.minimize_window()
+# driver.minimize_window()
 # sleep(3)
 # return-type for this is => NONE
 
@@ -51,3 +51,8 @@ print(name)
 # driver.close()
 #  IN Quit tag if the same situation is there, the whole screen will collapse along with all the tabs.
 # driver.quit()
+
+sleep(5)
+driver.back()
+sleep(5)
+driver.forward()
