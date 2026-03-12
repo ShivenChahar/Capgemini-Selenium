@@ -1,3 +1,12 @@
+'''Write a script to:
+-> navigate to a Wikipedia
+-> Refresh
+-> Fetch title
+-> Open amazon
+-> Fetch title
+-> Go back
+-> Close'''
+
 from selenium.webdriver import Chrome, ChromeOptions
 from time import sleep
 

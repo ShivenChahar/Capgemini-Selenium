@@ -52,7 +52,7 @@ print(name)
 #  IN Quit tag if the same situation is there, the whole screen will collapse along with all the tabs.
 # driver.quit()
 
-sleep(5)
-driver.back()
-sleep(5)
-driver.forward()
+sleep(5)   # This sleep is used for to get some time to click on a button on out website
+driver.back()   # This command will be automatically executed and will go back on the main landing page.
+sleep(5)   # This sleep will also give some spare time
+driver.forward()  # This command will go forward to our page where we came back.
