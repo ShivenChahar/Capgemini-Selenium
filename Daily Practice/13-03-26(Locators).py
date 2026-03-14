@@ -73,5 +73,6 @@ submit = driver.find_element(By.ID, 'submit').click()'''
 ###############################################################################
 # CSS Selectors
 
-driver.get('https://www.amazon.in/')
+driver.get('https://demoqa.com/text-box')
 sleep(5)
+driver.find_element(By.CSS_SELECTOR, 'userName').send_keys('Shiven Ji')

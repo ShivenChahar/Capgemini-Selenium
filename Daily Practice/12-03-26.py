@@ -13,7 +13,7 @@ driver = Chrome(options=options)  # We must declare the above variable here beca
 driver.get('https://amazon.in')  # This is a command which is passed to open a particular web-page.
 # return-type for this is => NONE
 
-#   --(3)--BROWSER WINDOW METHODS-----
+#   --(3)--BROWSER WINDOW METHODS-----   THEY HAVE BRACKET IN THE END
 
 # (1.)To Minimize a web-page.
 # driver.minimize_window()
@@ -29,7 +29,7 @@ driver.get('https://amazon.in')  # This is a command which is passed to open a p
 # driver.fullscreen_window()
 # return-type for this is => NONE
 
-#   --(3)--PAGE VERIFICATION METHODS----
+#   --(3)--PAGE VERIFICATION METHODS----  THEY ALSO DON'T HAVE THE BRACKETS IN THE END.
 
 # (1.) To fetch the Title
 # title = driver.title
