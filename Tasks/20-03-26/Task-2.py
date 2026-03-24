@@ -1,9 +1,9 @@
 from time import sleep
 from selenium.webdriver import Chrome,ChromeOptions
 from selenium.webdriver.common.by import By
-o=ChromeOptions()
-o.add_experimental_option("detach",True)
-driver=Chrome(options=o)
+options=ChromeOptions()
+options.add_experimental_option("detach",True)
+driver=Chrome(options=options)
 driver.get("https://www.zomato.com/jaipur/restaurants")
 driver.maximize_window()
 driver.implicitly_wait(10)
@@ -15,5 +15,5 @@ for i in dishes:
 sleep(2)
 dishes[2].click()
 
-sleep(6)
+sleep(5)
 driver.quit()
