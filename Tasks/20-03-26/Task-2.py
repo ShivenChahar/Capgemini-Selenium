@@ -1,8 +1,6 @@
+from time import sleep
 from selenium.webdriver import Chrome,ChromeOptions
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.select import Select
-from selenium.webdriver.support.wait import WebDriverWait
-from websocket import send
 o=ChromeOptions()
 o.add_experimental_option("detach",True)
 driver=Chrome(options=o)
@@ -14,4 +12,8 @@ driver.find_element(By.XPATH,"//input[@class='sc-dBfaGr dyyfrm']").send_keys("do
 dishes=driver.find_elements(By.XPATH,"//p[@class='sc-1hez2tp-0 sc-gFXMyG jkvifB']")
 for i in dishes:
     print(i.text)
+sleep(2)
 dishes[2].click()
+
+sleep(6)
+driver.quit()

@@ -1,7 +1,6 @@
 from time import sleep
 from selenium.webdriver import Chrome,ChromeOptions
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.select import Select
 o=ChromeOptions()
 o.add_experimental_option("detach",True)
 driver=Chrome(options=o)
@@ -15,3 +14,6 @@ sleep(2)
 for i in prod:
     print(i.text)
 prod[4].click()
+
+sleep(5)
+driver.quit()
