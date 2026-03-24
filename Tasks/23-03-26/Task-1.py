@@ -28,5 +28,5 @@ drop=driver.find_element(By.XPATH,"//div[@id='droppable']")
 actions.move_to_element(ele1).perform()                        # Mouse Hovering
 actions.pause(2).double_click(ele2).perform()                  # Double Click
 actions.pause(2).drag_and_drop(drag,drop).perform()            # Drag and Drop
-sleep(5)
+sleep(6)
 driver.close()
