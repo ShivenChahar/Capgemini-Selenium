@@ -1,0 +1,22 @@
+from selenium.webdriver import Chrome,ChromeOptions
+from time import sleep
+from selenium.webdriver.common.by import By
+options=ChromeOptions()
+options.add_experimental_option("detach",True)
+driver=Chrome(options=options)
+driver.implicitly_wait(10)
+driver.get("https://www.google.com/")
+driver.maximize_window()
+print(driver.title)
+print(driver.current_url)
+driver.switch_to.new_window()
+driver.get("https://www.shopsy.in")
+print(driver.title)
+print(driver.current_url)
+driver.switch_to.new_window()
+driver.get("https://www.facebook.com")
+print(driver.title)
+print(driver.current_url)
+driver.close()
+driver.switch_to.window(driver.window_handles[1])
+driver.close()

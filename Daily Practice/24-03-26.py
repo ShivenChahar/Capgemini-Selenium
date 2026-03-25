@@ -82,7 +82,22 @@ driver=Chrome(options=options)
 # driver.find_element(By.ID,'downloadButton').click()
 
 ###############################################(Task)(In this we have to enable a chrome option which will enable the safe-browsing)######################################################
-driver.get("https://www.python.org/downloads/")
-# options.add_experimental_option("prefs",{"safebrowsing.enabled":True})
-sleep(2)
-driver.find_element(By.XPATH,'(//a[@href="https://www.python.org/ftp/python/3.14.3/python-3.14.3-amd64.exe"])[2]').click()
+# driver.get("https://www.python.org/downloads/")
+# # options.add_experimental_option("prefs",{"safebrowsing.enabled":True})
+# sleep(2)
+# driver.find_element(By.XPATH,'(//a[@href="https://www.python.org/ftp/python/3.14.3/python-3.14.3-amd64.exe"])[2]').click()
+
+#########################################(Date Selection)##############################################
+driver.get("https://www.irctc.co.in/nget/train-search")
+driver.implicitly_wait(10)
+date = driver.find_element(By.XPATH,'//input[@class="ng-tns-c69-9 ui-inputtext ui-widget ui-state-default ui-corner-all ng-star-inserted"]').click()
+
+# nextbtn = driver.find_element(By.XPATH, '//span[@class="ui-datepicker-next-icon pi pi-chevron-right ng-tns-c69-9"]')
+# nextbtn.click()
+# sleep(2)
+# nextbtn.click()
+# sleep(2)
+driver.find_element(By.XPATH, '//span[@class="ui-datepicker-next-icon pi pi-chevron-right ng-tns-c69-9"]').click()
+driver.find_element(By.XPATH, '//span[@class="ui-datepicker-next-icon pi pi-chevron-right ng-tns-c69-9"]').click()
+driver.find_element(By.XPATH,'(//a[@class="ui-state-default ng-tns-c69-9 ng-star-inserted"])[11]').click()
+
