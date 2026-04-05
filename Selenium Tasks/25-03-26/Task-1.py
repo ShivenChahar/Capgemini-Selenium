@@ -19,3 +19,4 @@ else:
     folder = os.path.join(os.getcwd(), 'screenshot')
     os.makedirs(folder,exist_ok=True)
     driver.save_screenshot(f'{folder}/screenshot1.png')
+
