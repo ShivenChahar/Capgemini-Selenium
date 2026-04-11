@@ -1,16 +1,13 @@
-
-from api.login.login_api import LoginAPI
+from API.login_API import LoginAPI
 from utils.read_data import read_json
-
 
 login_api = LoginAPI()
 
 def test_valid_login():
-    data = read_json("test_data/login_data.json")
-
+    data = read_json("test_data/login.json")
     payload = data["valid_user"]
-
     response = login_api.login(payload)
+    print(response)
 
     assert response.status_code == 200
     res_json = response.json()
@@ -18,10 +15,9 @@ def test_valid_login():
     print("SHOPPER ID:", shopper_id)
 
 def test_invalid_login():
-    data = read_json("test_data/login_data.json")
-
+    data = read_json("test_data/login.json")
     payload = data["invalid_user"]
-
     response = login_api.login(payload)
+    print(response)
 
     assert response.status_code in [400, 401]

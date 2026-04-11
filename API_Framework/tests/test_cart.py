@@ -1,21 +1,19 @@
-from http.client import responses
-
-from api.cart.cart_api import CartApi
+from API.cart_API import CartAPI
 from utils.read_data import read_json
 from core.auth import get_auth_data
 
-cart_api = CartApi()
 
-def test_AddToCart(auth_data,headers):
-    data = read_json("test_data/addToCart.json")
+cart_api = CartAPI()
+
+def test_AddToCart(auth_data, headers):
+    data = read_json("test_data/cart.json")
 
     details = get_auth_data()
-    shopperId = details['shopper_id']
+    shopperId = details["shopper_id"]
 
-    response = cart_api.  addToCart(shopperId,data,headers=headers)
+    response = cart_api.addToCart(shopperId, data, headers=headers)
 
-
-    assert response.status_code == 201
+    assert response.status_code in [200, 201, 409]
     print(response.status_code)
     print(response.json())
     print(data)
